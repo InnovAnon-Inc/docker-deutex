@@ -29,6 +29,7 @@ RUN sleep 31 \
  && chmod -v +x bootstrap                    \
  && ./bootstrap                              \
  && ./configure                              \
+      --disable-shared --enable-static       \
  && make                                     \
  && make DESTDIR=/tmp/deutex install         \
  && cd           /tmp/deutex                 \
