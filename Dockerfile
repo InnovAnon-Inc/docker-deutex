@@ -24,7 +24,7 @@ RUN sleep 31 \
  && make DESTDIR=/tmp/deutex install         \
  && cd           /tmp/deutex                 \
  && strip.sh .                               \
- && tar acf        ../deutex.txz .           \
+ && tar  pacf        ../deutex.txz .           \
  && rm -rf           $LFS/sources/deutex
 
 FROM scratch as final
